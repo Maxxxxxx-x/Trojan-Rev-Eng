@@ -45,7 +45,7 @@ exports.default = function (v, h) {
       if (n.__retryCount >= n.retry) return Promise.reject(t);
       else {
         n.__retryCount += 1;
-        console.log(n.url + ' \u81ea\u52a8\u91cd\u8bd5\u7b2c' + n.__retryCount + '\u6b21');
+        console.log(n.url + "自动重试第" + n.__retryCount + "次");
         return new Promise(function (t) {
           setTimeout(function () {
             t();
